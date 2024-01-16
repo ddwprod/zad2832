@@ -1,0 +1,32 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function telefon(firma_k,model_k,rozmiar_k)//początek konstruktora
+{
+  this.firma=firma_k;
+  this.model=model_k;
+  this.rozmiar=rozmiar_k;
+}//koniec konstruktora
+  telefon.prototype.wypisz = function () //definicja metody
+   {
+      alert(this.firma + ' ' + this.model+ ' ' + this.rozmiar);
+   };
+ var telefon1 = new telefon("Samsung", "S23a", "6,6 cala"); // nowy obiekt osoba1
+ var telefon2 = new telefon("Iphone", "14", "6,06 cala"); 
+ var telefon3 = new telefon("Samsung", "A32", "6,7 cala"); 
+  telefon1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+  telefon2.wypisz();
+  telefon3.wypisz();
+ // poniżej dostęp do pól osoby1
+  document.write("Firma:"+telefon1.firma+" Model: "+telefon1.model+" Rozmiar ekranu: "+telefon1.rozmiar);
+  document.write("<br>");
+  document.write("Firma:"+telefon2.firma+" Model: "+telefon2.model+" Rozmiar ekranu: "+telefon2.rozmiar);
+  document.write("<br>");
+  document.write("Firma:"+telefon3.firma+" Model: "+telefon3.model+" Rozmiar ekranu: "+telefon3.rozmiar);
+ </script>
+ </head>
+<body>
+<br>
+ programowanie obiektowe 
+ </body>
+</html>
